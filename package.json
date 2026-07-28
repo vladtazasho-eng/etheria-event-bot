@@ -1,0 +1,32 @@
+{
+  "name": "etheria-event-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discord bot for reusable event and movie templates, scheduling, announcements, and host controls.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "register": "tsx src/register-commands.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test dist/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.2.1",
+    "luxon": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}
